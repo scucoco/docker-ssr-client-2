@@ -20,4 +20,4 @@ ENV SSR_OBFS=tls1.2_ticket_auth_compatible
 ENV PRIVOXY_LISTEN_HOST=0.0.0.0
 ENV PRIVOXY_LISTEN_PORT=8123
 
-CMD python /usr/local/share/shadowsocksr/shadowsocks/local.py -c /usr/local/share/shadowsocksr/config.json -d start; /bin/bash /entrypoint/setup.sh; privoxy --no-daemon /etc/privoxy/config
+CMD /bin/bash /entrypoint/setup.sh; python /usr/local/share/shadowsocksr/shadowsocks/local.py -c /usr/local/share/shadowsocksr/config.json -d start; privoxy --no-daemon /etc/privoxy/config
