@@ -1,0 +1,2 @@
+forward-socks5 / 127.0.0.1:1080 .
+listen-address privoxy_listen_host:privoxy_listen_port
