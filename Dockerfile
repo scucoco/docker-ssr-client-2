@@ -11,12 +11,12 @@ COPY ssr-client.json /usr/local/share/shadowsocksr/config.json
 COPY privoxy-config /etc/privoxy/config
 COPY setup.sh /entrypoint/setup.sh
 
-ENV SSR_SERVER_HOST=0.0.0.0
-ENV SSR_SERVER_PORT=8388
-ENV SSR_PASSWORD=password
-ENV SSR_METHOD=aes-128-ctr
-ENV SSR_PROTOCOL=auth_sha1_v4_compatible
-ENV SSR_OBFS=tls1.2_ticket_auth_compatible
+ENV SSR_SERVER_HOST=13.76.46.29
+ENV SSR_SERVER_PORT=2333
+ENV SSR_PASSWORD=hiaewalle
+ENV SSR_METHOD=AES-256-CFB
+ENV SSR_PROTOCOL=auth_aes128_md5
+ENV SSR_OBFS=tls1.2_ticket_auth
 ENV PRIVOXY_LISTEN_HOST=0.0.0.0
 ENV PRIVOXY_LISTEN_PORT=8123
 
